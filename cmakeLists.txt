@@ -1,0 +1,23 @@
+# Cmake minimum version
+cmake_minimum_required(VERSION 3.10)
+
+# Project name
+project(raycaster)
+
+# Set CPP standard
+set(CMAKE_CXX_STANDARD 14)
+
+# Adding required libraries.
+find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
+
+include_directories(${PROJECT_SOURCE_DIR}/lib/glad/include)
+
+set(SOURCES ${PROJECT_SOURCE_DIR}/src/main.cpp ${PROJECT_SOURCE_DIR}/lib/glad/src/glad.c)
+
+# Adding the exe.
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+
+# Linking.
+target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glfw)
