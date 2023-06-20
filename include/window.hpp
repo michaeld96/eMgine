@@ -28,5 +28,6 @@ void run_render_loop(GLFWwindow* window);
 
 /*****
  * 
+ */
 void process_input(GLFWwindow* window);
 #endif // WINDOW_HPP
