@@ -56,9 +56,16 @@ void run_render_loop(GLFWwindow* window)
 {
     while(!glfwWindowShouldClose(window))
     {
+        // 1. input
         process_input(window);
         
+        // 2. render.
+        glClearColor(0.2f, 0.2f, 0.2f, 0);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // 3. Swap buffers.
         glfwSwapBuffers(window);
+        // 4. Check events:
         // Checks to see any events have been triggered, and if so
         // the window state will be updated.
         glfwPollEvents();

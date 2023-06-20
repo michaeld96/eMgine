@@ -27,7 +27,9 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void run_render_loop(GLFWwindow* window);
 
 /*****
- * 
+ * @brief 
+ * Processes input while window is open.
+ * @param window A GLFW window.
  */
 void process_input(GLFWwindow* window);
 #endif // WINDOW_HPP
