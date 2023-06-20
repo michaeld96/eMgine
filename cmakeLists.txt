@@ -11,9 +11,16 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 
-include_directories(${PROJECT_SOURCE_DIR}/lib/glad/include)
+include_directories(
+    ${PROJECT_SOURCE_DIR}/lib/glad/include
+    ${PROJECT_SOURCE_DIR}/src
+    )
 
-set(SOURCES ${PROJECT_SOURCE_DIR}/src/main.cpp ${PROJECT_SOURCE_DIR}/lib/glad/src/glad.c)
+set(
+    SOURCES ${PROJECT_SOURCE_DIR}/src/main.cpp 
+    ${PROJECT_SOURCE_DIR}/lib/glad/src/glad.c
+    ${PROJECT_SOURCE_DIR}/src/window.cpp
+)
 
 # Adding the exe.
 add_executable(${PROJECT_NAME} ${SOURCES})
