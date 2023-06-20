@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OpenGLProject
+# Target rules for targets named raycaster
 
 # Build rule for target.
-OpenGLProject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OpenGLProject
-.PHONY : OpenGLProject
+raycaster: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raycaster
+.PHONY : raycaster
 
 # fast build rule for target.
-OpenGLProject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/build
-.PHONY : OpenGLProject/fast
+raycaster/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/build
+.PHONY : raycaster/fast
 
 lib/glad/src/glad.o: lib/glad/src/glad.c.o
 .PHONY : lib/glad/src/glad.o
 
 # target to build an object file
 lib/glad/src/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/lib/glad/src/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/lib/glad/src/glad.c.o
 .PHONY : lib/glad/src/glad.c.o
 
 lib/glad/src/glad.i: lib/glad/src/glad.c.i
@@ -142,7 +142,7 @@ lib/glad/src/glad.i: lib/glad/src/glad.c.i
 
 # target to preprocess a source file
 lib/glad/src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/lib/glad/src/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/lib/glad/src/glad.c.i
 .PHONY : lib/glad/src/glad.c.i
 
 lib/glad/src/glad.s: lib/glad/src/glad.c.s
@@ -150,7 +150,7 @@ lib/glad/src/glad.s: lib/glad/src/glad.c.s
 
 # target to generate assembly for a file
 lib/glad/src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/lib/glad/src/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/lib/glad/src/glad.c.s
 .PHONY : lib/glad/src/glad.c.s
 
 src/main.o: src/main.cpp.o
@@ -158,7 +158,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +166,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,8 +174,32 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/window.o: src/window.cpp.o
+.PHONY : src/window.o
+
+# target to build an object file
+src/window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/window.cpp.o
+.PHONY : src/window.cpp.o
+
+src/window.i: src/window.cpp.i
+.PHONY : src/window.i
+
+# target to preprocess a source file
+src/window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/window.cpp.i
+.PHONY : src/window.cpp.i
+
+src/window.s: src/window.cpp.s
+.PHONY : src/window.s
+
+# target to generate assembly for a file
+src/window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/window.cpp.s
+.PHONY : src/window.cpp.s
 
 # Help Target
 help:
@@ -185,13 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OpenGLProject"
+	@echo "... raycaster"
 	@echo "... lib/glad/src/glad.o"
 	@echo "... lib/glad/src/glad.i"
 	@echo "... lib/glad/src/glad.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/window.o"
+	@echo "... src/window.i"
+	@echo "... src/window.s"
 .PHONY : help
 
 

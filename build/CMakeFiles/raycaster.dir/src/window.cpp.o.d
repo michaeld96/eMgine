@@ -1,5 +1,5 @@
-CMakeFiles/raycaster.dir/src/main.cpp.o: \
-  /Users/michaeldick/Documents/Projects/raycaster-game-engine/src/main.cpp \
+CMakeFiles/raycaster.dir/src/window.cpp.o: \
+  /Users/michaeldick/Documents/Projects/raycaster-game-engine/src/window.cpp \
   /Users/michaeldick/Documents/Projects/raycaster-game-engine/src/libraries.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \

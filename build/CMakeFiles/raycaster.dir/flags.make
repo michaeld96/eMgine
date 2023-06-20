@@ -5,13 +5,13 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/include -isystem /usr/local/include
+C_INCLUDES = -I/Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/include -I/Users/michaeldick/Documents/Projects/raycaster-game-engine/src -isystem /usr/local/include
 
 C_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/include -isystem /usr/local/include
+CXX_INCLUDES = -I/Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/include -I/Users/michaeldick/Documents/Projects/raycaster-game-engine/src -isystem /usr/local/include
 
 CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -std=gnu++14
 

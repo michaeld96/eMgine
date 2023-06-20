@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/michaeldick/Documents/Projects/raycaster-game-engine/b
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/OpenGLProject.dir/all
+all: CMakeFiles/raycaster.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/OpenGLProject.dir/clean
+clean: CMakeFiles/raycaster.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/OpenGLProject.dir
+# Target rules for target CMakeFiles/raycaster.dir
 
 # All Build rule for target.
-CMakeFiles/OpenGLProject.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles --progress-num=1,2,3 "Built target OpenGLProject"
-.PHONY : CMakeFiles/OpenGLProject.dir/all
+CMakeFiles/raycaster.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles --progress-num=1,2,3,4 "Built target raycaster"
+.PHONY : CMakeFiles/raycaster.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/OpenGLProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGLProject.dir/all
+CMakeFiles/raycaster.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/raycaster.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles 0
-.PHONY : CMakeFiles/OpenGLProject.dir/rule
+.PHONY : CMakeFiles/raycaster.dir/rule
 
 # Convenience name for target.
-OpenGLProject: CMakeFiles/OpenGLProject.dir/rule
-.PHONY : OpenGLProject
+raycaster: CMakeFiles/raycaster.dir/rule
+.PHONY : raycaster
 
 # clean rule for target.
-CMakeFiles/OpenGLProject.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/clean
-.PHONY : CMakeFiles/OpenGLProject.dir/clean
+CMakeFiles/raycaster.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/clean
+.PHONY : CMakeFiles/raycaster.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

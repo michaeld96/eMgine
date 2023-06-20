@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/raycaster.dir/lib/glad/src/glad.c.o.d"
   "CMakeFiles/raycaster.dir/src/main.cpp.o"
   "CMakeFiles/raycaster.dir/src/main.cpp.o.d"
+  "CMakeFiles/raycaster.dir/src/window.cpp.o"
+  "CMakeFiles/raycaster.dir/src/window.cpp.o.d"
   "raycaster"
   "raycaster.pdb"
 )
