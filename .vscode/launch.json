@@ -14,7 +14,7 @@
             ],
             // "args": [""],
             "stopOnEntry": false,
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}/src"
         },
     ]
 }

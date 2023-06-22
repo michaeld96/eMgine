@@ -4,6 +4,11 @@
 std::string load_shader(const std:: string& filename)
 {
     std::ifstream file(filename);
+    if (!file.is_open())
+    {
+        std::cerr << "Cannot open shader file.\n" << std::strerror(errno) << "\n";
+        return "";
+    }
     std::stringstream buffer;
     buffer << file.rdbuf();
     return buffer.str();
@@ -11,8 +16,8 @@ std::string load_shader(const std:: string& filename)
 
 int main()
 {
-    GLFWwindow* my_window = window_start_up(800, 600, "hello");
-    // run_render_loop(my_window);
+    GLFWwindow* my_window = window_start_up(800, 600, "window_name_input");
+    run_render_loop(my_window);
     float vertices[] = {
         -0.5f, -0.5f, 0.0f,
         0.5f, -0.5f, 0.0f,
@@ -35,6 +40,25 @@ int main()
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     // Load in shader.
-    std::string s =  load_shader("vertex-shader.vert");
+    std::string source =  load_shader("../src/vertex-shader.vert");
+    const char* shader_source = source.c_str();
+
+    // Creating the shader.
+    unsigned int vertex_shader = glCreateShader(GL_VERTEX_SHADER);
+
+    // Attaching the code for the shader and compiling.
+    glShaderSource(vertex_shader, 1, &shader_source, NULL);
+    glCompileShader(vertex_shader);
+
+    // Checking to see if shader compiled.
+    int success;
+    char info[512];
+    glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &success);
+
+    if (!success)
+    {
+        glGetShaderInfoLog(vertex_shader, 512, NULL, info);
+        std::cerr << "ERROR::SHADER::VERTEX::COMPILATION::FAILED\n" << info << "\n";
+    }
     return 0;
 }
