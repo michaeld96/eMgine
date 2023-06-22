@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/michaeldick/Documents/Projects/raycaster-game-engine/CMakeLists.txt"
+  "/Users/michaeldick/Documents/Projects/eMgine/CMakeLists.txt"
   "CMakeFiles/3.25.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.0/CMakeSystem.cmake"
@@ -54,5 +54,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/raycaster.dir/DependInfo.cmake"
+  "CMakeFiles/eMgine.dir/DependInfo.cmake"
   )

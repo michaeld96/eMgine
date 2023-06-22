@@ -1,5 +1,5 @@
-CMakeFiles/OpenGLProject.dir/lib/glad/src/glad.c.o: \
-  /Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/src/glad.c \
+CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o: \
+  /Users/michaeldick/Documents/Projects/eMgine/lib/glad/src/glad.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/cdefs.h \
@@ -79,7 +79,7 @@ CMakeFiles/OpenGLProject.dir/lib/glad/src/glad.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/secure/_string.h \
-  /Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/include/glad/glad.h \
-  /Users/michaeldick/Documents/Projects/raycaster-game-engine/lib/glad/include/KHR/khrplatform.h \
+  /Users/michaeldick/Documents/Projects/eMgine/lib/glad/include/glad/glad.h \
+  /Users/michaeldick/Documents/Projects/eMgine/lib/glad/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/dlfcn.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdbool.h

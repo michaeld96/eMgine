@@ -2,10 +2,14 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project name
-project(raycaster)
+project(eMgine)
 
 # Set CPP standard
 set(CMAKE_CXX_STANDARD 14)
+
+if (NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug)
+endif()
 
 # Adding required libraries.
 find_package(OpenGL REQUIRED)

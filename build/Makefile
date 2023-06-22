@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.25.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/michaeldick/Documents/Projects/raycaster-game-engine
+CMAKE_SOURCE_DIR = /Users/michaeldick/Documents/Projects/eMgine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/michaeldick/Documents/Projects/raycaster-game-engine/build
+CMAKE_BINARY_DIR = /Users/michaeldick/Documents/Projects/eMgine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles /Users/michaeldick/Documents/Projects/raycaster-game-engine/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/eMgine/build/CMakeFiles /Users/michaeldick/Documents/Projects/eMgine/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/raycaster-game-engine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaeldick/Documents/Projects/eMgine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named raycaster
+# Target rules for targets named eMgine
 
 # Build rule for target.
-raycaster: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 raycaster
-.PHONY : raycaster
+eMgine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 eMgine
+.PHONY : eMgine
 
 # fast build rule for target.
-raycaster/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/build
-.PHONY : raycaster/fast
+eMgine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/build
+.PHONY : eMgine/fast
 
 lib/glad/src/glad.o: lib/glad/src/glad.c.o
 .PHONY : lib/glad/src/glad.o
 
 # target to build an object file
 lib/glad/src/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/lib/glad/src/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o
 .PHONY : lib/glad/src/glad.c.o
 
 lib/glad/src/glad.i: lib/glad/src/glad.c.i
@@ -142,7 +142,7 @@ lib/glad/src/glad.i: lib/glad/src/glad.c.i
 
 # target to preprocess a source file
 lib/glad/src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/lib/glad/src/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/lib/glad/src/glad.c.i
 .PHONY : lib/glad/src/glad.c.i
 
 lib/glad/src/glad.s: lib/glad/src/glad.c.s
@@ -150,7 +150,7 @@ lib/glad/src/glad.s: lib/glad/src/glad.c.s
 
 # target to generate assembly for a file
 lib/glad/src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/lib/glad/src/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/lib/glad/src/glad.c.s
 .PHONY : lib/glad/src/glad.c.s
 
 src/main.o: src/main.cpp.o
@@ -158,7 +158,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +166,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +174,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/window.o: src/window.cpp.o
@@ -182,7 +182,7 @@ src/window.o: src/window.cpp.o
 
 # target to build an object file
 src/window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/window.cpp.o
 .PHONY : src/window.cpp.o
 
 src/window.i: src/window.cpp.i
@@ -190,7 +190,7 @@ src/window.i: src/window.cpp.i
 
 # target to preprocess a source file
 src/window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/window.cpp.i
 .PHONY : src/window.cpp.i
 
 src/window.s: src/window.cpp.s
@@ -198,7 +198,7 @@ src/window.s: src/window.cpp.s
 
 # target to generate assembly for a file
 src/window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/window.cpp.s
 .PHONY : src/window.cpp.s
 
 # Help Target
@@ -209,7 +209,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... raycaster"
+	@echo "... eMgine"
 	@echo "... lib/glad/src/glad.o"
 	@echo "... lib/glad/src/glad.i"
 	@echo "... lib/glad/src/glad.s"

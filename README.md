@@ -1,8 +1,6 @@
-# Raycaster Game Engine
+# eMgine 
 
 ## TODO
-- [ ] Create a window function.
-    
-    * This is going to be done with OpenGL.
-- [ ] Create a player draw function.
-- [ ] Create a world draw function.
+- [x] Create a window function.
+- [ ] Create a draw function.
+- [ ] Implement UI using ImGUI.
