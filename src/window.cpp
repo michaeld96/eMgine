@@ -52,7 +52,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-void run_render_loop(GLFWwindow* window)
+void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned int VAO)
 {
     while(!glfwWindowShouldClose(window))
     {
@@ -62,6 +62,10 @@ void run_render_loop(GLFWwindow* window)
         // 2. render.
         glClearColor(0.2f, 0.2f, 0.2f, 0);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        glUseProgram(shader_program);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
 
         // 3. Swap buffers.
         glfwSwapBuffers(window);

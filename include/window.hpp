@@ -24,7 +24,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
  * Forever loop until user hits close on the window.
  * @param window A GLFW window pointer.
  */
-void run_render_loop(GLFWwindow* window);
+void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned int VAO);
 
 /*****
  * @brief 
