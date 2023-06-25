@@ -65,7 +65,8 @@ void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned i
 
         glUseProgram(shader_program);
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        // glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         // 3. Swap buffers.
         glfwSwapBuffers(window);
@@ -74,7 +75,6 @@ void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned i
         // the window state will be updated.
         glfwPollEvents();
     }
-    glfwTerminate();
 }
 
 void process_input(GLFWwindow* window)
