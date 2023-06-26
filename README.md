@@ -2,5 +2,6 @@
 
 ## TODO
 - [x] Create a window function.
-- [ ] Create a draw function.
+- [x] Create a draw function.
+- [ ] Make a vector drawing function.
 - [ ] Implement UI using ImGUI.
