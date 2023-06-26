@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/michaeldick/Documents/Projects/eMgine/lib/glad/src/glad.c" "CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o" "gcc" "CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o.d"
+  "/Users/michaeldick/Documents/Projects/eMgine/src/buffer.cpp" "CMakeFiles/eMgine.dir/src/buffer.cpp.o" "gcc" "CMakeFiles/eMgine.dir/src/buffer.cpp.o.d"
   "/Users/michaeldick/Documents/Projects/eMgine/src/main.cpp" "CMakeFiles/eMgine.dir/src/main.cpp.o" "gcc" "CMakeFiles/eMgine.dir/src/main.cpp.o.d"
+  "/Users/michaeldick/Documents/Projects/eMgine/src/shader_set_up.cpp" "CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o" "gcc" "CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o.d"
   "/Users/michaeldick/Documents/Projects/eMgine/src/window.cpp" "CMakeFiles/eMgine.dir/src/window.cpp.o" "gcc" "CMakeFiles/eMgine.dir/src/window.cpp.o.d"
   )
 

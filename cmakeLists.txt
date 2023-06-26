@@ -24,6 +24,8 @@ set(
     SOURCES ${PROJECT_SOURCE_DIR}/src/main.cpp 
     ${PROJECT_SOURCE_DIR}/lib/glad/src/glad.c
     ${PROJECT_SOURCE_DIR}/src/window.cpp
+    ${PROJECT_SOURCE_DIR}/src/shader_set_up.cpp
+    ${PROJECT_SOURCE_DIR}/src/buffer.cpp
 )
 
 # Adding the exe.

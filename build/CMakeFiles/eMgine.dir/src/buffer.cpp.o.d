@@ -1,5 +1,6 @@
-CMakeFiles/eMgine.dir/src/main.cpp.o: \
-  /Users/michaeldick/Documents/Projects/eMgine/src/main.cpp \
+CMakeFiles/eMgine.dir/src/buffer.cpp.o: \
+  /Users/michaeldick/Documents/Projects/eMgine/src/buffer.cpp \
+  /Users/michaeldick/Documents/Projects/eMgine/include/buffer.hpp \
   /Users/michaeldick/Documents/Projects/eMgine/include/libraries.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
@@ -752,7 +753,4 @@ CMakeFiles/eMgine.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream \
-  /Users/michaeldick/Documents/Projects/eMgine/include/window.hpp \
-  /Users/michaeldick/Documents/Projects/eMgine/include/shader_set_up.hpp \
-  /Users/michaeldick/Documents/Projects/eMgine/include/buffer.hpp
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/sstream

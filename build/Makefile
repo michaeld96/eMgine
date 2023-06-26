@@ -153,6 +153,30 @@ lib/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/lib/glad/src/glad.c.s
 .PHONY : lib/glad/src/glad.c.s
 
+src/buffer.o: src/buffer.cpp.o
+.PHONY : src/buffer.o
+
+# target to build an object file
+src/buffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/buffer.cpp.o
+.PHONY : src/buffer.cpp.o
+
+src/buffer.i: src/buffer.cpp.i
+.PHONY : src/buffer.i
+
+# target to preprocess a source file
+src/buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/buffer.cpp.i
+.PHONY : src/buffer.cpp.i
+
+src/buffer.s: src/buffer.cpp.s
+.PHONY : src/buffer.s
+
+# target to generate assembly for a file
+src/buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/buffer.cpp.s
+.PHONY : src/buffer.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -176,6 +200,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/shader_set_up.o: src/shader_set_up.cpp.o
+.PHONY : src/shader_set_up.o
+
+# target to build an object file
+src/shader_set_up.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o
+.PHONY : src/shader_set_up.cpp.o
+
+src/shader_set_up.i: src/shader_set_up.cpp.i
+.PHONY : src/shader_set_up.i
+
+# target to preprocess a source file
+src/shader_set_up.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/shader_set_up.cpp.i
+.PHONY : src/shader_set_up.cpp.i
+
+src/shader_set_up.s: src/shader_set_up.cpp.s
+.PHONY : src/shader_set_up.s
+
+# target to generate assembly for a file
+src/shader_set_up.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/shader_set_up.cpp.s
+.PHONY : src/shader_set_up.cpp.s
 
 src/window.o: src/window.cpp.o
 .PHONY : src/window.o
@@ -213,9 +261,15 @@ help:
 	@echo "... lib/glad/src/glad.o"
 	@echo "... lib/glad/src/glad.i"
 	@echo "... lib/glad/src/glad.s"
+	@echo "... src/buffer.o"
+	@echo "... src/buffer.i"
+	@echo "... src/buffer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/shader_set_up.o"
+	@echo "... src/shader_set_up.i"
+	@echo "... src/shader_set_up.s"
 	@echo "... src/window.o"
 	@echo "... src/window.i"
 	@echo "... src/window.s"

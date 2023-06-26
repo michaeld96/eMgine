@@ -1,5 +1,6 @@
 #include "libraries.hpp"
 #include "window.hpp"
+#include <typeinfo>
 
 GLFWwindow* window_start_up(int width, int height, const char *window_name)
 {
@@ -52,8 +53,13 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned int VAO)
+void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned int VAO, unsigned int* EBO)
 {
+    bool run_elements = false;
+    if (EBO != nullptr)
+    {
+        run_elements = true;
+    }
     while(!glfwWindowShouldClose(window))
     {
         // 1. input
@@ -62,11 +68,14 @@ void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned i
         // 2. render.
         glClearColor(0.2f, 0.2f, 0.2f, 0);
         glClear(GL_COLOR_BUFFER_BIT);
-
         glUseProgram(shader_program);
         glBindVertexArray(VAO);
-        // glDrawArrays(GL_TRIANGLES, 0, 3);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        if (run_elements)
+        {
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        }
+        glDrawArrays(GL_TRIANGLES, 0, 6);
+        
 
         // 3. Swap buffers.
         glfwSwapBuffers(window);

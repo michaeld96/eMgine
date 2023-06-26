@@ -12,26 +12,10 @@ std::string load_shader(const std::string& filename)
     buffer << file.rdbuf();
     return buffer.str();
 }
-
-void set_up_verticies(std::string file_path)
+unsigned int init_vertex_shader(const std::string& _source)
 {
-        // Making an instance of a vertex buffer object.
-    unsigned int VBO;
-    // Creating one buffer.
-    glGenBuffers(1, &VBO);
-
-    // Binding the buffer. GL_ARRAY_BUFFER is used for vertices.
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-    // Copies vertex data into buffers memory.
-    // ARGS:    1. the typ eof buffer we want to copy data into.
-    //          2. the size we want to pass to the buffer.
-    //          3. the actual data.
-    //          4. tell the graphics card how we want it to manage the data.
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
     // Load in shader.
-    std::string source =  load_shader("../src/vertex-shader.vert");
+    std::string source =  load_shader(_source);
     const char* shader_source = source.c_str();
 
     // Creating the shader.
@@ -51,4 +35,53 @@ void set_up_verticies(std::string file_path)
         glGetShaderInfoLog(vertex_shader, 512, NULL, info);
         std::cerr << "ERROR::SHADER::VERTEX::COMPILATION::FAILED\n" << info << "\n";
     }
+    return vertex_shader;
+}
+
+unsigned int init_fragment_shader(const std::string& _source)
+{
+    int success;
+    char info[512];
+    unsigned int fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
+
+    // Load in the source and compile the fragment shader source.
+    std::string source = load_shader(_source);
+    const char* shader_source = source.c_str();
+    glShaderSource(fragment_shader, 1, &shader_source, NULL);
+    glCompileShader(fragment_shader);
+
+    // Check to see if fragment shader was compiled OK.
+    glGetShaderiv(fragment_shader, GL_COMPILE_STATUS, &success);
+    if (!success)
+    {
+        glGetShaderInfoLog(fragment_shader, 512, NULL, info);
+        std::cerr << "ERROR::SHADER::FRAGMENT::COMPILATION::FAILED\n" << info << "\n";
+    }
+    // Return the fragment shader.
+    return fragment_shader;
+}
+
+unsigned int init_shader_program(unsigned int vertex_shader, unsigned int fragment_shader)
+{
+    // Creating a shader program.   
+    int success;
+    char info[512];
+    unsigned int shader_program = glCreateProgram();
+    glAttachShader(shader_program, vertex_shader);
+    glAttachShader(shader_program, fragment_shader);
+    glLinkProgram(shader_program);
+
+    // Check to see if the shader_program linked successfully.
+    glGetProgramiv(shader_program, GL_LINK_STATUS, &success);
+    if (!success)
+    {
+        glGetProgramInfoLog(shader_program, 512, NULL, info);
+        std::cerr << "ERROR::SHADER_PROGRAM::LINKER::FAILED\n" << info << "\n";
+    }
+
+    // Delete the shader objects because we have linked!
+    glDeleteShader(vertex_shader);
+    glDeleteShader(fragment_shader);
+
+    return shader_program;
 }

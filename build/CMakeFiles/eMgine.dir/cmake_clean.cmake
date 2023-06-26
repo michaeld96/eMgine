@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o"
   "CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o.d"
+  "CMakeFiles/eMgine.dir/src/buffer.cpp.o"
+  "CMakeFiles/eMgine.dir/src/buffer.cpp.o.d"
   "CMakeFiles/eMgine.dir/src/main.cpp.o"
   "CMakeFiles/eMgine.dir/src/main.cpp.o.d"
+  "CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o"
+  "CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o.d"
   "CMakeFiles/eMgine.dir/src/window.cpp.o"
   "CMakeFiles/eMgine.dir/src/window.cpp.o.d"
   "eMgine"
