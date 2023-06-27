@@ -70,11 +70,12 @@ void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned i
         glClear(GL_COLOR_BUFFER_BIT);
         glUseProgram(shader_program);
         glBindVertexArray(VAO);
-        if (run_elements)
-        {
-            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        }
-        glDrawArrays(GL_TRIANGLES, 0, 6);
+        // if (run_elements)
+        // {
+        //     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        // }
+        // glDrawArrays(GL_TRIANGLES, 0, 6);
+        glDrawArrays(GL_LINES, 0, 4);
         
 
         // 3. Swap buffers.
