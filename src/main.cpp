@@ -42,7 +42,7 @@ int main()
 
     // unsigned int VAO, VBO, EBO;
     unsigned int VAO, VBO;
-
+    // Added for lines.
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     
@@ -54,6 +54,7 @@ int main()
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
+    // end of lines.
 
     // init_all_buffers(&VAO, &VBO, nullptr, 1, 1, 0, line, sizeof(line), nullptr, 0, 0, 3);
     
