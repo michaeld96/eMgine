@@ -76,7 +76,7 @@ void run_render_loop(GLFWwindow* window, unsigned int shader_program, unsigned i
         // }
         // glDrawArrays(GL_TRIANGLES, 0, 6);
         glDrawArrays(GL_LINES, 0, 4);
-        
+               
 
         // 3. Swap buffers.
         glfwSwapBuffers(window);
