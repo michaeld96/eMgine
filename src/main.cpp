@@ -2,72 +2,107 @@
 #include "window.hpp"
 #include "shader_set_up.hpp"
 #include "buffer.hpp"
+#include "matrices.hpp"
+#include "unit_tests.hpp"
+#include "ppm.hpp"
 
 void clean_up_objects(unsigned int VAO, unsigned int VBO, unsigned int EBO, unsigned int shader_program);
 
-int main()
+int main(int argc, char* argv[])
 {
-    GLFWwindow* my_window = window_start_up(800, 600, "window_name_input");
-    
-    // float vertices[] = {
-    //     -0.5f, -0.5f, 0.0f,
-    //     0.5f, -0.5f, 0.0f,
-    //     0.0f,  0.5f, 0.0f
-    // };
+    bool exit_program = false;
+    int choice = 0;
+    std::cout << "!!!!!!!!!!!! eMgine !!!!!!!!!!!!\n";
+    while(!exit_program)
+    {
+    std::cout << "1. CLI Testing.\n";
+    std::cout << "2. Graphics Testing.\n";
+    std::cout << "3. Exit Program\n";
+    std::cin >> choice;
+    switch (choice)
+    {
+        case 1:
+        {
+            std::vector<Pixel> pixels;
+            read_ppm("../ppm-imgs/smile.ppm", pixels);
+            break;
+        }
+        case 2:
+        {
+            GLFWwindow* my_window = window_start_up(800, 600, "window_name_input");
+        
+            // float vertices[] = {
+            //     -0.5f, -0.5f, 0.0f,
+            //     0.5f, -0.5f, 0.0f,
+            //     0.0f,  0.5f, 0.0f
+            // };
 
-    // float square_vertices[] = {
-    //     0.5f,  0.5f, 0.0f,  // top right
-    //     0.5f, -0.5f, 0.0f,  // bottom right
-    //     -0.5f, -0.5f, 0.0f,  // bottom left
-    //     -0.5f,  0.5f, 0.0f   // top left 
-    // };
+            // float square_vertices[] = {
+            //     0.5f,  0.5f, 0.0f,  // top right
+            //     0.5f, -0.5f, 0.0f,  // bottom right
+            //     -0.5f, -0.5f, 0.0f,  // bottom left
+            //     -0.5f,  0.5f, 0.0f   // top left 
+            // };
 
-    // unsigned int indices[] = {
-    //     0, 1, 3,
-    //     1, 2, 3
-    // };
-    float line[] = {
-        0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // x, y, z, R, G, B.
-        0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
+            // unsigned int indices[] = {
+            //     0, 1, 3,
+            //     1, 2, 3
+            // };
+            float line[] = {
+                0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // x, y, z, R, G, B.
+                0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
 
-        0.0f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
-        0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f
-    };
+                0.0f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f,
+                0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f
+            };
 
-    unsigned int vertex_shader = init_vertex_shader("../src/shaders/vertex-shader.vert");
+            unsigned int vertex_shader = init_vertex_shader("../src/shaders/vertex-shader.vert");
 
-    unsigned int fragment_shader = init_fragment_shader("../src/shaders/fragment-shader.frag");
+            unsigned int fragment_shader = init_fragment_shader("../src/shaders/fragment-shader.frag");
 
-    unsigned int shader_program = init_shader_program(vertex_shader, fragment_shader);
+            unsigned int shader_program = init_shader_program(vertex_shader, fragment_shader);
 
-    // unsigned int VAO, VBO, EBO;
-    unsigned int VAO, VBO;
-    // Added for lines.
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(line) , line, GL_STATIC_DRAW);
+            // unsigned int VAO, VBO, EBO;
+            unsigned int VAO, VBO;
+            // Added for lines.
+            glGenVertexArrays(1, &VAO);
+            glGenBuffers(1, &VBO);
+            
+            glBindVertexArray(VAO);
+            glBindBuffer(GL_ARRAY_BUFFER, VBO);
+            glBufferData(GL_ARRAY_BUFFER, sizeof(line) , line, GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-    
-    // end of lines.
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+            glEnableVertexAttribArray(0);
+            glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+            glEnableVertexAttribArray(1);
+            
+            // end of lines.
 
-    // init_all_buffers(&VAO, &VBO, nullptr, 1, 1, 0, line, sizeof(line), nullptr, 0, 0, 3);
-    
-    // For rectangle.
-    // init_all_buffers(&VAO, &VBO, &EBO, 1, 1, 1, square_vertices, sizeof(square_vertices), indices, sizeof(indices), 0, 3);
+            // init_all_buffers(&VAO, &VBO, nullptr, 1, 1, 0, line, sizeof(line), nullptr, 0, 0, 3);
+            
+            // For rectangle.
+            // init_all_buffers(&VAO, &VBO, &EBO, 1, 1, 1, square_vertices, sizeof(square_vertices), indices, sizeof(indices), 0, 3);
 
-    // For triangle.
-    // init_all_buffers(&VAO, &VBO, nullptr, 1, 1, 0, vertices, sizeof(vertices), nullptr, 0, 0, 3);
+            // For triangle.
+            // init_all_buffers(&VAO, &VBO, nullptr, 1, 1, 0, vertices, sizeof(vertices), nullptr, 0, 0, 3);
 
-    // run_render_loop(my_window, shader_program, VAO, &EBO);
-    run_render_loop(my_window, shader_program, VAO, nullptr);
-    clean_up_objects(VAO, VBO, 0, shader_program);
+            // run_render_loop(my_window, shader_program, VAO, &EBO);
+            run_render_loop(my_window, shader_program, VAO, nullptr);
+            clean_up_objects(VAO, VBO, 0, shader_program);
+            break;
+        }
+        case 3:
+            exit_program = true;
+            break;
+        default:
+        {
+            std::cout << "Not a valid choice.\n";
+            break;
+        }
+    }
+    }
+    std::cout << "Thanks for using eMgine!\n";
     return 0;
 }
 

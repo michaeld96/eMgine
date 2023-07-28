@@ -139,13 +139,43 @@ CMakeFiles/eMgine.dir/src/buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eMgine.dir/src/buffer.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/michaeldick/Documents/Projects/eMgine/src/buffer.cpp -o CMakeFiles/eMgine.dir/src/buffer.cpp.s
 
+CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o: CMakeFiles/eMgine.dir/flags.make
+CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o: /Users/michaeldick/Documents/Projects/eMgine/src/unit-tests/unit_tests.cpp
+CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o: CMakeFiles/eMgine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michaeldick/Documents/Projects/eMgine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o -MF CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o.d -o CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o -c /Users/michaeldick/Documents/Projects/eMgine/src/unit-tests/unit_tests.cpp
+
+CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/michaeldick/Documents/Projects/eMgine/src/unit-tests/unit_tests.cpp > CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.i
+
+CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/michaeldick/Documents/Projects/eMgine/src/unit-tests/unit_tests.cpp -o CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.s
+
+CMakeFiles/eMgine.dir/src/ppm.cpp.o: CMakeFiles/eMgine.dir/flags.make
+CMakeFiles/eMgine.dir/src/ppm.cpp.o: /Users/michaeldick/Documents/Projects/eMgine/src/ppm.cpp
+CMakeFiles/eMgine.dir/src/ppm.cpp.o: CMakeFiles/eMgine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michaeldick/Documents/Projects/eMgine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/eMgine.dir/src/ppm.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/eMgine.dir/src/ppm.cpp.o -MF CMakeFiles/eMgine.dir/src/ppm.cpp.o.d -o CMakeFiles/eMgine.dir/src/ppm.cpp.o -c /Users/michaeldick/Documents/Projects/eMgine/src/ppm.cpp
+
+CMakeFiles/eMgine.dir/src/ppm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/eMgine.dir/src/ppm.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/michaeldick/Documents/Projects/eMgine/src/ppm.cpp > CMakeFiles/eMgine.dir/src/ppm.cpp.i
+
+CMakeFiles/eMgine.dir/src/ppm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/eMgine.dir/src/ppm.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/michaeldick/Documents/Projects/eMgine/src/ppm.cpp -o CMakeFiles/eMgine.dir/src/ppm.cpp.s
+
 # Object files for target eMgine
 eMgine_OBJECTS = \
 "CMakeFiles/eMgine.dir/src/main.cpp.o" \
 "CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o" \
 "CMakeFiles/eMgine.dir/src/window.cpp.o" \
 "CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o" \
-"CMakeFiles/eMgine.dir/src/buffer.cpp.o"
+"CMakeFiles/eMgine.dir/src/buffer.cpp.o" \
+"CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o" \
+"CMakeFiles/eMgine.dir/src/ppm.cpp.o"
 
 # External object files for target eMgine
 eMgine_EXTERNAL_OBJECTS =
@@ -155,10 +185,12 @@ eMgine: CMakeFiles/eMgine.dir/lib/glad/src/glad.c.o
 eMgine: CMakeFiles/eMgine.dir/src/window.cpp.o
 eMgine: CMakeFiles/eMgine.dir/src/shader_set_up.cpp.o
 eMgine: CMakeFiles/eMgine.dir/src/buffer.cpp.o
+eMgine: CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o
+eMgine: CMakeFiles/eMgine.dir/src/ppm.cpp.o
 eMgine: CMakeFiles/eMgine.dir/build.make
 eMgine: /usr/local/lib/libglfw.3.3.dylib
 eMgine: CMakeFiles/eMgine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michaeldick/Documents/Projects/eMgine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable eMgine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michaeldick/Documents/Projects/eMgine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable eMgine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/eMgine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

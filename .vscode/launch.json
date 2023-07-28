@@ -8,11 +8,11 @@
             // "preLaunchTask": "build debug executable",
             "program": "${workspaceFolder}/build/eMgine",
             "stdio": [
-                null, // redirect stdin
+                "${workspaceFolder}/build/sim_user_input.txt", // redirect stdin
                 null, // redirect stdout
                 null // redirect stderr
             ],
-            // "args": [""],
+            // "args": ["1", "1"],
             "stopOnEntry": false,
             "cwd": "${workspaceFolder}/src"
         },

@@ -26,6 +26,8 @@ set(
     ${PROJECT_SOURCE_DIR}/src/window.cpp
     ${PROJECT_SOURCE_DIR}/src/shader_set_up.cpp
     ${PROJECT_SOURCE_DIR}/src/buffer.cpp
+    ${PROJECT_SOURCE_DIR}/src/unit-tests/unit_tests.cpp
+    ${PROJECT_SOURCE_DIR}/src/ppm.cpp
 )
 
 # Adding the exe.

@@ -201,6 +201,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/ppm.o: src/ppm.cpp.o
+.PHONY : src/ppm.o
+
+# target to build an object file
+src/ppm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/ppm.cpp.o
+.PHONY : src/ppm.cpp.o
+
+src/ppm.i: src/ppm.cpp.i
+.PHONY : src/ppm.i
+
+# target to preprocess a source file
+src/ppm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/ppm.cpp.i
+.PHONY : src/ppm.cpp.i
+
+src/ppm.s: src/ppm.cpp.s
+.PHONY : src/ppm.s
+
+# target to generate assembly for a file
+src/ppm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/ppm.cpp.s
+.PHONY : src/ppm.cpp.s
+
 src/shader_set_up.o: src/shader_set_up.cpp.o
 .PHONY : src/shader_set_up.o
 
@@ -224,6 +248,30 @@ src/shader_set_up.s: src/shader_set_up.cpp.s
 src/shader_set_up.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/shader_set_up.cpp.s
 .PHONY : src/shader_set_up.cpp.s
+
+src/unit-tests/unit_tests.o: src/unit-tests/unit_tests.cpp.o
+.PHONY : src/unit-tests/unit_tests.o
+
+# target to build an object file
+src/unit-tests/unit_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.o
+.PHONY : src/unit-tests/unit_tests.cpp.o
+
+src/unit-tests/unit_tests.i: src/unit-tests/unit_tests.cpp.i
+.PHONY : src/unit-tests/unit_tests.i
+
+# target to preprocess a source file
+src/unit-tests/unit_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.i
+.PHONY : src/unit-tests/unit_tests.cpp.i
+
+src/unit-tests/unit_tests.s: src/unit-tests/unit_tests.cpp.s
+.PHONY : src/unit-tests/unit_tests.s
+
+# target to generate assembly for a file
+src/unit-tests/unit_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/eMgine.dir/build.make CMakeFiles/eMgine.dir/src/unit-tests/unit_tests.cpp.s
+.PHONY : src/unit-tests/unit_tests.cpp.s
 
 src/window.o: src/window.cpp.o
 .PHONY : src/window.o
@@ -267,9 +315,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/ppm.o"
+	@echo "... src/ppm.i"
+	@echo "... src/ppm.s"
 	@echo "... src/shader_set_up.o"
 	@echo "... src/shader_set_up.i"
 	@echo "... src/shader_set_up.s"
+	@echo "... src/unit-tests/unit_tests.o"
+	@echo "... src/unit-tests/unit_tests.i"
+	@echo "... src/unit-tests/unit_tests.s"
 	@echo "... src/window.o"
 	@echo "... src/window.i"
 	@echo "... src/window.s"
