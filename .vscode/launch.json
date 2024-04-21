@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lua: Debug",
+            "type": "lua",
+            "request": "launch",
+            "program": "${workspaceFolder}/lua_examples/meta_table.lua"
+        },
+        {
+            "name": "Debug Game Engine - OSX",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/game_engine_linux",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            // "miDebuggerPath": "/usr/bin/lldb",
+            "preLaunchTask": "Build Game Engine"
+        },
+        
+        {
+            "name": "Debug Game Engine - Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/game_engine_linux",
+            "args": [], // Command line arguments passed to the program.
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb", // or "lldb" if you are using clang
+            "miDebuggerPath": "/usr/bin/gdb", // or "/usr/bin/lldb" for clang
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build Game Engine", // This should match the label of the task in tasks.json
+            "postDebugTask": "" // You can specify a task to run after debugging if needed
+        }
+    ]
+}
