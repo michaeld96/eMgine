@@ -50,7 +50,6 @@ eMgine comes with a range of features out of the box:
 * Physics simulation powered by box2d
 * Advanced rendering with Dear ImGui integration
 * Asset management and an in-built file dialog
-* Support for multiple input devices
 
 ## Getting Started 
 For community support, feature requests, or to report bugs, please use the GitHub issues page associated with this repository.
